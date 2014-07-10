@@ -2,6 +2,25 @@ Protocol Buffers - Google's data interchange format
 Copyright 2008 Google Inc.
 http://code.google.com/apis/protocolbuffers/
 
+Compiling in PLinux RHEL6 or RHEL7
+==================================
+For compiling protobuf on PLinux(big-endian) RHEL6 or 7 we need to use gcc >=
+4.7.
+
+We can get the gcc >= 4.7 from Advanced toolchain.
+ftp://ftp.unicamp.br/pub/linuxpatch/toolchain/at/redhat
+And we need below two rpms
+
+advance-toolchain-at7.0-devel-7.0-4.ppc64
+advance-toolchain-at7.0-runtime-7.0-4.ppc64
+
+After installing the rpms set the envirnoment variables as
+
+export CXX=/opt/at7.0/bin/powerpc64-linux-c++
+export CC=/opt/at7.0/bin/powerpc64-linux-gcc
+
+and then compile it using the instructions given below.
+
 C++ Installation - Unix
 =======================
 
